@@ -42,7 +42,7 @@ public class StartingPage extends javax.swing.JFrame {
         jLabel1.setText("JEOPARDY");
 
         jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(191, 144, 0));
+        jLabel2.setForeground(new java.awt.Color(150, 113, 0));
         jLabel2.setText("Test your knowledge and challenge your brain");
 
         jButton2.setBackground(new java.awt.Color(229, 78, 55));
@@ -143,6 +143,7 @@ public class StartingPage extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**

@@ -38,7 +38,7 @@ public class EndPage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(146, 185, 243));
 
         jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(191, 144, 0));
+        jLabel2.setForeground(new java.awt.Color(150, 113, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Game has ended");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);

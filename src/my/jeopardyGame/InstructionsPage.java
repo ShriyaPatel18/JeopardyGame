@@ -36,7 +36,7 @@ public class InstructionsPage extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(146, 185, 243));
 
         jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(191, 144, 0));
+        jLabel2.setForeground(new java.awt.Color(150, 113, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Instructions");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -44,7 +44,7 @@ public class InstructionsPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 10)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(147, 74, 56));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<html>   If you do not know how to play this game, do not worry because  <br>    it is quite simple. All you need to do is choose a questions from  <br>  the Jeopardy board. Each column has a different theme. The lighter  <br> color blocks will be easier questions (to most) and will be multiple  <br>  choice. The darker color blocks will be harder questions, worth<br>  more points and will not be multiple choice.  If you get the answer <br>  right, you will gain points. Otherwise, you will lose points. But be <br> careful, there is a timer! If you fail to answer the question within the <br> time limit,  your points will be deducted. Depending on the question,<br> you will get certain superpowers. However, you only have a limited <br> amount of  them,  so use them carefully! Now let's have fun and play !<br> <!html> ");
+        jLabel1.setText("<html>   If you do not know how to play this game, do not worry because  <br>    it is quite simple. All you need to do is choose a questions from  <br>  the Jeopardy board. \nEach column has a different theme. The lighter  <br> color blocks will be easier questions (to most) and will be multiple  <br>  choice. \nThe darker color blocks will be harder questions, worth<br>  more points and will not be multiple choice.  If you get the answer <br>\n  right, you will gain points. Otherwise, you will lose points. But be <br> \ncareful, there is a timer! If you fail to answer the question within the <br>\n time limit,  your points will be deducted. Now let's have fun and play !<br> <!html> ");
         jLabel1.setToolTipText("");
         jLabel1.setAlignmentX(0.5F);
         jLabel1.setAutoscrolls(true);
@@ -55,6 +55,11 @@ public class InstructionsPage extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 0, 0));
         jButton1.setText("<html>\nGo back to <br>\nMain Menu");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,6 +103,13 @@ public class InstructionsPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        StartingPage start = new StartingPage();
+        start.show();
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

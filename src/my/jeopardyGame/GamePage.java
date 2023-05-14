@@ -10,17 +10,15 @@ package my.jeopardyGame;
  */
 public class GamePage extends javax.swing.JFrame {
      
-     
-     
+     static int points;
+     static int questionsDone = 0;
      
      
     /**
      * Creates new form GamePage
      */
-    //GamePage questions = new GamePage();
     public GamePage() {
         initComponents();
-        
     }
 
     /**
@@ -32,7 +30,24 @@ public class GamePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PointPage = new javax.swing.JDialog();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton16 = new javax.swing.JButton();
+        endPage = new javax.swing.JFrame();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jButton15 = new javax.swing.JButton();
+        RightNow = new javax.swing.JFrame();
         jPanel1 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jButton20 = new javax.swing.JButton();
+        mainPage = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -53,9 +68,250 @@ public class GamePage extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton13 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        PointPage.setMinimumSize(new java.awt.Dimension(450, 300));
+
+        jPanel2.setBackground(new java.awt.Color(146, 185, 243));
+        jPanel2.setMinimumSize(new java.awt.Dimension(200, 200));
+        jPanel2.setPreferredSize(new java.awt.Dimension(400, 300));
+
+        jLabel7.setFont(new java.awt.Font("Showcard Gothic", 0, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(150, 113, 0));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Right Now");
+        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel8.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(147, 74, 56));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("display points");
+        jLabel8.setToolTipText("");
+        jLabel8.setAlignmentX(0.5F);
+        jLabel8.setAutoscrolls(true);
+        jLabel8.setFocusable(false);
+        jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jButton16.setBackground(new java.awt.Color(255, 102, 102));
+        jButton16.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jButton16.setText("Next");
+        jButton16.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)))
+                .addContainerGap(27, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton16)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
+                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout PointPageLayout = new javax.swing.GroupLayout(PointPage.getContentPane());
+        PointPage.getContentPane().setLayout(PointPageLayout);
+        PointPageLayout.setHorizontalGroup(
+            PointPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PointPageLayout.setVerticalGroup(
+            PointPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        endPage.setMinimumSize(new java.awt.Dimension(400, 300));
+        endPage.setPreferredSize(new java.awt.Dimension(400, 313));
+
+        jPanel3.setBackground(new java.awt.Color(146, 185, 243));
+        jPanel3.setMinimumSize(new java.awt.Dimension(400, 375));
+        jPanel3.setPreferredSize(new java.awt.Dimension(400, 375));
+
+        jLabel9.setFont(new java.awt.Font("Showcard Gothic", 0, 48)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(150, 113, 0));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Game has ended");
+        jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel10.setFont(new java.awt.Font("Showcard Gothic", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(147, 74, 56));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Thank you for playing");
+        jLabel10.setToolTipText("");
+        jLabel10.setAlignmentX(0.5F);
+        jLabel10.setAutoscrolls(true);
+        jLabel10.setFocusable(false);
+        jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jButton14.setBackground(new java.awt.Color(224, 130, 174));
+        jButton14.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jButton14.setForeground(new java.awt.Color(102, 0, 0));
+        jButton14.setText("exit");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setFont(new java.awt.Font("Showcard Gothic", 0, 10)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(147, 74, 56));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("display points");
+        jLabel11.setToolTipText("");
+        jLabel11.setAlignmentX(0.5F);
+        jLabel11.setAutoscrolls(true);
+        jLabel11.setFocusable(false);
+        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jButton15.setBackground(new java.awt.Color(234, 153, 140));
+        jButton15.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jButton15.setForeground(new java.awt.Color(102, 0, 0));
+        jButton15.setText("play again");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(jButton15)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20))
+        );
+
+        javax.swing.GroupLayout endPageLayout = new javax.swing.GroupLayout(endPage.getContentPane());
+        endPage.getContentPane().setLayout(endPageLayout);
+        endPageLayout.setHorizontalGroup(
+            endPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        endPageLayout.setVerticalGroup(
+            endPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         jPanel1.setBackground(new java.awt.Color(146, 185, 243));
+
+        jLabel18.setFont(new java.awt.Font("Showcard Gothic", 0, 48)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(150, 113, 0));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel18.setText("Right Now");
+        jLabel18.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel19.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(147, 74, 56));
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("display points");
+        jLabel19.setToolTipText("");
+        jLabel19.setAlignmentX(0.5F);
+        jLabel19.setAutoscrolls(true);
+        jLabel19.setFocusable(false);
+        jLabel19.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jButton20.setBackground(new java.awt.Color(255, 102, 102));
+        jButton20.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
+        jButton20.setText("Next");
+        jButton20.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(28, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton20)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout RightNowLayout = new javax.swing.GroupLayout(RightNow.getContentPane());
+        RightNow.getContentPane().setLayout(RightNowLayout);
+        RightNowLayout.setHorizontalGroup(
+            RightNowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        RightNowLayout.setVerticalGroup(
+            RightNowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        mainPage.setBackground(new java.awt.Color(146, 185, 243));
 
         jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(119, 95, 4));
@@ -63,14 +319,14 @@ public class GamePage extends javax.swing.JFrame {
         jLabel1.setAlignmentX(11.0F);
 
         jLabel2.setFont(new java.awt.Font("Showcard Gothic", 0, 15)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(191, 144, 0));
+        jLabel2.setForeground(new java.awt.Color(150, 113, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Choose any button");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jButton1.setBackground(new java.awt.Color(255, 153, 102));
         jButton1.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(191, 144, 0));
+        jButton1.setForeground(new java.awt.Color(150, 113, 0));
         jButton1.setText("500");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +336,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(255, 204, 204));
         jButton2.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(191, 144, 0));
+        jButton2.setForeground(new java.awt.Color(150, 113, 0));
         jButton2.setText("300 ");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +346,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(237, 255, 219));
         jButton3.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(191, 144, 0));
+        jButton3.setForeground(new java.awt.Color(150, 113, 0));
         jButton3.setText("300");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,7 +356,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(255, 204, 204));
         jButton4.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(191, 144, 0));
+        jButton4.setForeground(new java.awt.Color(150, 113, 0));
         jButton4.setText("300");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +366,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(255, 153, 153));
         jButton5.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(191, 144, 0));
+        jButton5.setForeground(new java.awt.Color(150, 113, 0));
         jButton5.setText("500");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +376,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton6.setBackground(new java.awt.Color(255, 255, 204));
         jButton6.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(191, 144, 0));
+        jButton6.setForeground(new java.awt.Color(150, 113, 0));
         jButton6.setText("300");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,7 +386,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(255, 212, 170));
         jButton7.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(191, 144, 0));
+        jButton7.setForeground(new java.awt.Color(150, 113, 0));
         jButton7.setText("300");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -140,7 +396,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton8.setBackground(new java.awt.Color(255, 255, 153));
         jButton8.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(191, 144, 0));
+        jButton8.setForeground(new java.awt.Color(150, 113, 0));
         jButton8.setText("500");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,7 +406,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton9.setBackground(new java.awt.Color(255, 212, 170));
         jButton9.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(191, 144, 0));
+        jButton9.setForeground(new java.awt.Color(150, 113, 0));
         jButton9.setText("300");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +416,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton10.setBackground(new java.awt.Color(204, 255, 153));
         jButton10.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(191, 144, 0));
+        jButton10.setForeground(new java.awt.Color(150, 113, 0));
         jButton10.setText("500");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,7 +426,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton11.setBackground(new java.awt.Color(255, 255, 153));
         jButton11.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(191, 144, 0));
+        jButton11.setForeground(new java.awt.Color(150, 113, 0));
         jButton11.setText("500");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,7 +436,7 @@ public class GamePage extends javax.swing.JFrame {
 
         jButton12.setBackground(new java.awt.Color(204, 255, 153));
         jButton12.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton12.setForeground(new java.awt.Color(191, 144, 0));
+        jButton12.setForeground(new java.awt.Color(150, 113, 0));
         jButton12.setText("500");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -189,25 +445,25 @@ public class GamePage extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Showcard Gothic", 0, 15)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(191, 144, 0));
+        jLabel3.setForeground(new java.awt.Color(150, 113, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("History");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel4.setFont(new java.awt.Font("Showcard Gothic", 0, 15)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(191, 144, 0));
+        jLabel4.setForeground(new java.awt.Color(150, 113, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Space");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel5.setFont(new java.awt.Font("Showcard Gothic", 0, 15)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(191, 144, 0));
+        jLabel5.setForeground(new java.awt.Color(150, 113, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Earth");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel6.setFont(new java.awt.Font("Showcard Gothic", 0, 15)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(191, 144, 0));
+        jLabel6.setForeground(new java.awt.Color(150, 113, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Art history");
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -222,99 +478,99 @@ public class GamePage extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout mainPageLayout = new javax.swing.GroupLayout(mainPage);
+        mainPage.setLayout(mainPageLayout);
+        mainPageLayout.setHorizontalGroup(
+            mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPageLayout.createSequentialGroup()
+                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPageLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(mainPageLayout.createSequentialGroup()
+                        .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mainPageLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPageLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(jLabel4)
                                 .addGap(21, 21, 21)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mainPageLayout.createSequentialGroup()
                                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(mainPageLayout.createSequentialGroup()
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(mainPageLayout.createSequentialGroup()
+                                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(mainPageLayout.createSequentialGroup()
                                         .addGap(11, 11, 11)
                                         .addComponent(jLabel3)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(mainPageLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPageLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel6)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(mainPageLayout.createSequentialGroup()
                                         .addGap(23, 23, 23)
                                         .addComponent(jLabel5)))))))
                 .addGap(12, 12, 12))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(mainPageLayout.createSequentialGroup()
                 .addGap(139, 139, 139)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        mainPageLayout.setVerticalGroup(
+            mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPageLayout.createSequentialGroup()
+                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPageLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(mainPageLayout.createSequentialGroup()
                         .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5)
                     .addComponent(jLabel6))
                 .addGap(2, 2, 2)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -322,19 +578,19 @@ public class GamePage extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton10, jButton11, jButton12, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9});
+        mainPageLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton10, jButton11, jButton12, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9});
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel3, jLabel4, jLabel5, jLabel6});
+        mainPageLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel3, jLabel4, jLabel5, jLabel6});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -342,96 +598,129 @@ public class GamePage extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        QuesAnsHard ques8 = new QuesAnsHard("What is the symbol used by Romans to represent 1000?", "infinity", "Space");
-        ques8.displayHard();
+        //Points point8 = new Points(500);
+        QuestionPage ques2 = new  QuestionPage("What is the symbol used by Romans to represent 1000?", "infinity", "Space", this,this);
+        ques2.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        QuesAnsEasy ques5 = new QuesAnsEasy("Which eon of Earth's history has the least info?","A. Proterozoic","B. Phanerozoic","C. Hadean","D. Archean","C","Earth");
-        ques5.display();
+        //Points point6 = new Points(300);
+        EasyGamePage ques1 = new EasyGamePage("Which eon of Earth's history has the least info?","A. Proterozoic","B. Phanerozoic","C. Hadean","D. Archean","C","Earth", this,this);
+        ques1.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        QuesAnsEasy ques4 = new QuesAnsEasy("Who painted the mural the Last Supper?","A. Claude Monet","B. Leonardo Da Vinci","C. Vincent Van Gogh","D. Michelangelo","B","Art History");
-        ques4.display();
+        //Points point5 = new Points("300");
+        EasyGamePage ques1 = new  EasyGamePage("Who painted the mural the Last Supper?","A. Claude Monet","B. Leonardo Da Vinci","C. Vincent Van Gogh","D. Michelangelo","B","Art History", this,this);
+        ques1.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        QuesAnsEasy ques6 = new QuesAnsEasy("What is the oldest civilization in the world?","A. Mesopotamia","B. Egypt","C. India","D. Rome","B","History");
-        ques6.display();
+        //Points point4 = new Points(300);
+        EasyGamePage ques1 = new  EasyGamePage("What is the oldest civilization in the world?","A. Mesopotamia","B. Egypt","C. India","D. Rome","B","History", this, this);
+        ques1.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        QuesAnsHard ques9 = new QuesAnsHard("In which country are the Terracota Warriors from?", "china", "Art History");
-        ques9.displayHard();
+        QuestionPage ques2 = new  QuestionPage("In which country are the Terracota Warriors from?", "china", "Art History",this,this);
+        ques2.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        QuesAnsEasy ques3 = new QuesAnsEasy("Which one of Henry VIII's wives recieved a Queens's funeral?","A. Anne Boleyn ","B. Catherine of Aragon","C. Jane Seymour","D. Catherine Howard","C","History");
-        ques3.display();
+        EasyGamePage ques1 = new  EasyGamePage("Which one of Henry VIII's wives recieved a Queens's funeral?","A. Anne Boleyn ","B. Catherine of Aragon","C. Jane Seymour","D. Catherine Howard","C","History", this, this);
+        ques1.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
-        QuesAnsHard ques11 = new QuesAnsHard("In what year was Earth Day created?", "1970", "Earth");
-        ques11.displayHard();
-        dispose();
+        //Points point11 = new Points(500);
+         QuestionPage ques2 = new  QuestionPage("In what year was Earth Day created?", "1970", "Earth",this,this);
+         ques2.setVisible(true);
+         dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-        QuesAnsHard ques10 = new QuesAnsHard("Who painted the inside of the Sistine Chapel?", "michelanangelo", "Art History");
-        ques10.displayHard();
+//        Points point9 = new Points("500");
+        QuestionPage ques2 = new QuestionPage("Who painted the inside of the Sistine Chapel?", "michelanangelo", "Art History", this,this);
+        ques2.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-        QuesAnsHard ques12 = new QuesAnsHard("What is the very bottom soil horizon called?", "bedrock", "Earth");
-        ques12.displayHard();
+//        Points point12 = new Points("500");
+//        point12.displayPointsHard();
+        QuestionPage ques2 = new  QuestionPage("What is the very bottom soil horizon called?", "bedrock", "Earth", this,this);
+        ques2.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-  
-        QuesAnsEasy ques1 = new QuesAnsEasy("What is the coldest planet in our Solar System?","A. Uranus","B. Neptune","C. Mars","D. Venus","A","Space");
-        ques1.display();
-        dispose();
+        //Points point1 = new Points(300);
+        EasyGamePage ques1 = new  EasyGamePage("What is the coldest planet in our Solar System?","A. Uranus","B. Neptune","C. Mars","D. Venus","A","Space", this,this);
+        ques1.setVisible(true);
+        this.setVisible(false);
+        questionsDone = questionsDone + 1;
+     
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        
-        QuesAnsEasy ques2 = new QuesAnsEasy("Which moon of Jupiter's is volcanically active?","A. Titan","B. Enceladus"," C. Ganymede","D. IO","D","Space");
-        ques2.display();
-        dispose();
+        //Points point2 = new Points(300);
+        EasyGamePage ques1 = new  EasyGamePage("Which moon of Jupiter's is volcanically active?","A. Titan","B. Enceladus"," C. Ganymede","D. IO","D","Space", this,  this);
+        ques1.setVisible(true);
+        this.setVisible(false);
+      
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        QuesAnsHard ques7 = new QuesAnsHard("What color is Mars' Sunset?", "blue", "Space");
-        ques7.displayHard();
+        //Points point7 = new Points(500);
+        QuestionPage ques2 = new  QuestionPage("What color is Mars' Sunset?", "blue", "Space", this,this);
+        ques2.setVisible(true);
         dispose();
+        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
         StartingPage start = new StartingPage();
-        start.show();
+        start.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        
+        GamePage newPage = new GamePage();
+        newPage.show();
+        dispose();
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton20ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -467,28 +756,73 @@ public class GamePage extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
+    private javax.swing.JDialog PointPage;
+    private javax.swing.JFrame RightNow;
+    private javax.swing.JFrame endPage;
+    public javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton10;
+    public javax.swing.JButton jButton11;
+    public javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
+    public javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    public javax.swing.JButton jButton3;
+    public javax.swing.JButton jButton4;
+    public javax.swing.JButton jButton5;
+    public javax.swing.JButton jButton6;
+    public javax.swing.JButton jButton7;
+    public javax.swing.JButton jButton8;
+    public javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    public javax.swing.JPanel mainPage;
     // End of variables declaration//GEN-END:variables
+
+public void showMessage(String text){
+    questionsDone++;
+     if (questionsDone != 4){
+        PointPage.setVisible(true);
+        jLabel8.setText(text);
+     }
+     else{
+        endPage.setVisible(true);
+         jLabel11.setText(text);
+     }
+    }
+
+ 
 }
+
     
