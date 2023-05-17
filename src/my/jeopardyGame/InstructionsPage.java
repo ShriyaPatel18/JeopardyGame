@@ -44,7 +44,7 @@ public class InstructionsPage extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Showcard Gothic", 0, 10)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(147, 74, 56));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("<html>   If you do not know how to play this game, do not worry because  <br>    it is quite simple. All you need to do is choose a questions from  <br>  the Jeopardy board. \nEach column has a different theme. The lighter  <br> color blocks will be easier questions (to most) and will be multiple  <br>  choice. \nThe darker color blocks will be harder questions, worth<br>  more points and will not be multiple choice.  If you get the answer <br>\n  right, you will gain points. Otherwise, you will lose points. But be <br> \ncareful, there is a timer! If you fail to answer the question within the <br>\n time limit,  your points will be deducted. Now let's have fun and play !<br> <!html> ");
+        jLabel1.setText("<html>   If you do not know how to play this game, do not worry because  <br>    it is quite simple. All you need to do is choose a questions from  <br> \n the Jeopardy board.  Each column has a different theme. The lighter  <br> color blocks will be easier questions (to most) and will be multiple  <br>  choice. \nThe darker color blocks will be harder questions, worth<br>  more points and will not be multiple choice.  If you get the answer <br>  \n right, you will gain points. Otherwise,  as the is unfair Jeopardy, all <br>\npoints will be subtracted and you will alwys end up with -300 or -500.<br>\n But be  careful, there is a timer! If you fail to answer the question <br>\n within the time limit,  your points will be lost. Now let's have fun<br> and play !<br> <!html> ");
         jLabel1.setToolTipText("");
         jLabel1.setAlignmentX(0.5F);
         jLabel1.setAutoscrolls(true);
@@ -72,7 +72,7 @@ public class InstructionsPage extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)

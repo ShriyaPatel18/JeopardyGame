@@ -51,7 +51,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
@@ -97,7 +97,7 @@
               <Color blue="38" green="4a" red="93" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;   If you do not know how to play this game, do not worry because  &lt;br&gt;    it is quite simple. All you need to do is choose a questions from  &lt;br&gt;  the Jeopardy board. &#xa;Each column has a different theme. The lighter  &lt;br&gt; color blocks will be easier questions (to most) and will be multiple  &lt;br&gt;  choice. &#xa;The darker color blocks will be harder questions, worth&lt;br&gt;  more points and will not be multiple choice.  If you get the answer &lt;br&gt;&#xa;  right, you will gain points. Otherwise, you will lose points. But be &lt;br&gt; &#xa;careful, there is a timer! If you fail to answer the question within the &lt;br&gt;&#xa; time limit,  your points will be deducted. Now let&apos;s have fun and play !&lt;br&gt; &lt;!html&gt; "/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;   If you do not know how to play this game, do not worry because  &lt;br&gt;    it is quite simple. All you need to do is choose a questions from  &lt;br&gt; &#xa; the Jeopardy board.  Each column has a different theme. The lighter  &lt;br&gt; color blocks will be easier questions (to most) and will be multiple  &lt;br&gt;  choice. &#xa;The darker color blocks will be harder questions, worth&lt;br&gt;  more points and will not be multiple choice.  If you get the answer &lt;br&gt;  &#xa; right, you will gain points. Otherwise,  as the is unfair Jeopardy, all &lt;br&gt;&#xa;points will be subtracted and you will alwys end up with -300 or -500.&lt;br&gt;&#xa; But be  careful, there is a timer! If you fail to answer the question &lt;br&gt;&#xa; within the time limit,  your points will be lost. Now let&apos;s have fun&lt;br&gt; and play !&lt;br&gt; &lt;!html&gt; "/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="alignmentX" type="float" value="0.5"/>
             <Property name="autoscrolls" type="boolean" value="true"/>

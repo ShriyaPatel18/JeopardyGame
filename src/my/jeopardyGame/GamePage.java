@@ -3,15 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package my.jeopardyGame;
-
+import java.util.*;
 /**
  *
  * @author Home
  */
 public class GamePage extends javax.swing.JFrame {
      
-     static int points;
+     int[] points = new int[12]; 
      static int questionsDone = 0;
+     int total;
      
      
     /**
@@ -19,6 +20,7 @@ public class GamePage extends javax.swing.JFrame {
      */
     public GamePage() {
         initComponents();
+        total = 0;
     }
 
     /**
@@ -41,7 +43,6 @@ public class GamePage extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jButton14 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        jButton15 = new javax.swing.JButton();
         RightNow = new javax.swing.JFrame();
         jPanel1 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
@@ -144,8 +145,8 @@ public class GamePage extends javax.swing.JFrame {
         endPage.setPreferredSize(new java.awt.Dimension(400, 313));
 
         jPanel3.setBackground(new java.awt.Color(146, 185, 243));
-        jPanel3.setMinimumSize(new java.awt.Dimension(400, 375));
-        jPanel3.setPreferredSize(new java.awt.Dimension(400, 375));
+        jPanel3.setMinimumSize(new java.awt.Dimension(400, 200));
+        jPanel3.setPreferredSize(new java.awt.Dimension(400, 200));
 
         jLabel9.setFont(new java.awt.Font("Showcard Gothic", 0, 48)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(150, 113, 0));
@@ -183,16 +184,6 @@ public class GamePage extends javax.swing.JFrame {
         jLabel11.setFocusable(false);
         jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jButton15.setBackground(new java.awt.Color(234, 153, 140));
-        jButton15.setFont(new java.awt.Font("Showcard Gothic", 0, 12)); // NOI18N
-        jButton15.setForeground(new java.awt.Color(102, 0, 0));
-        jButton15.setText("play again");
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -201,18 +192,15 @@ public class GamePage extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(jButton15)
-                        .addGap(29, 29, 29)
-                        .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(150, 150, 150))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -223,11 +211,9 @@ public class GamePage extends javax.swing.JFrame {
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(97, 97, 97))
         );
 
         javax.swing.GroupLayout endPageLayout = new javax.swing.GroupLayout(endPage.getContentPane());
@@ -238,7 +224,9 @@ public class GamePage extends javax.swing.JFrame {
         );
         endPageLayout.setVerticalGroup(
             endPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(endPageLayout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(146, 185, 243));
@@ -599,7 +587,7 @@ public class GamePage extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         //Points point8 = new Points(500);
-        QuestionPage ques2 = new  QuestionPage("What is the symbol used by Romans to represent 1000?", "infinity", "Space", this,this);
+        QuestionPage ques2 = new  QuestionPage("What is the symbol used by Romans to represent 1000?", "infinity", "Space", this,this,"..... and BEYOND!");
         ques2.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -607,7 +595,7 @@ public class GamePage extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         //Points point6 = new Points(300);
-        EasyGamePage ques1 = new EasyGamePage("Which eon of Earth's history has the least info?","A. Proterozoic","B. Phanerozoic","C. Hadean","D. Archean","C","Earth", this,this);
+        EasyGamePage ques1 = new EasyGamePage("Which eon of Earth's history has the least info?","A. Proterozoic","B. Phanerozoic","C. Hadean","D. Archean","C","Earth", this,this,"This was the longest eon in the geological history!");
         ques1.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -615,7 +603,7 @@ public class GamePage extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
         //Points point5 = new Points("300");
-        EasyGamePage ques1 = new  EasyGamePage("Who painted the mural the Last Supper?","A. Claude Monet","B. Leonardo Da Vinci","C. Vincent Van Gogh","D. Michelangelo","B","Art History", this,this);
+        EasyGamePage ques1 = new  EasyGamePage("Who painted the mural the Last Supper?","A. Claude Monet","B. Leonardo Da Vinci","C. Vincent Van Gogh","D. Michelangelo","B","Art History", this,this,"This painter is also known as an engineer and theorist!");
         ques1.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -623,21 +611,21 @@ public class GamePage extends javax.swing.JFrame {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
         //Points point4 = new Points(300);
-        EasyGamePage ques1 = new  EasyGamePage("What is the oldest civilization in the world?","A. Mesopotamia","B. Egypt","C. India","D. Rome","B","History", this, this);
+        EasyGamePage ques1 = new  EasyGamePage("What is the oldest civilization in the world?","A. Mesopotamia","B. Egypt","C. India","D. Rome","B","History", this, this,"This civilization was the earliest civilization!");
         ques1.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        QuestionPage ques2 = new  QuestionPage("In which country are the Terracota Warriors from?", "china", "Art History",this,this);
+        QuestionPage ques2 = new  QuestionPage("In which country are the Terracota Warriors from?", "china", "Art History",this,this,"This country is in the Eastern Asia!");
         ques2.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        EasyGamePage ques1 = new  EasyGamePage("Which one of Henry VIII's wives recieved a Queens's funeral?","A. Anne Boleyn ","B. Catherine of Aragon","C. Jane Seymour","D. Catherine Howard","C","History", this, this);
+        EasyGamePage ques1 = new  EasyGamePage("Which one of Henry VIII's wives recieved a Queens's funeral?","A. Anne Boleyn ","B. Catherine of Aragon","C. Jane Seymour","D. Catherine Howard","C","History", this, this,"This queen was his third wife!");
         ques1.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -645,7 +633,7 @@ public class GamePage extends javax.swing.JFrame {
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
         //Points point11 = new Points(500);
-         QuestionPage ques2 = new  QuestionPage("In what year was Earth Day created?", "1970", "Earth",this,this);
+         QuestionPage ques2 = new  QuestionPage("In what year was Earth Day created?", "1970", "Earth",this,this,"This happened in the late 1900s!");
          ques2.setVisible(true);
          dispose();
     }//GEN-LAST:event_jButton10ActionPerformed
@@ -653,7 +641,7 @@ public class GamePage extends javax.swing.JFrame {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
 //        Points point9 = new Points("500");
-        QuestionPage ques2 = new QuestionPage("Who painted the inside of the Sistine Chapel?", "michelanangelo", "Art History", this,this);
+        QuestionPage ques2 = new QuestionPage("Who painted the inside of the Sistine Chapel?", "michelanangelo", "Art History", this,this,"This artists name starts with an M!");
         ques2.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton11ActionPerformed
@@ -662,7 +650,7 @@ public class GamePage extends javax.swing.JFrame {
         // TODO add your handling code here:
 //        Points point12 = new Points("500");
 //        point12.displayPointsHard();
-        QuestionPage ques2 = new  QuestionPage("What is the very bottom soil horizon called?", "bedrock", "Earth", this,this);
+        QuestionPage ques2 = new  QuestionPage("What is the very bottom soil horizon called?", "bedrock", "Earth", this,this,"This word has 2 words combined together!");
         ques2.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton12ActionPerformed
@@ -670,17 +658,17 @@ public class GamePage extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //Points point1 = new Points(300);
-        EasyGamePage ques1 = new  EasyGamePage("What is the coldest planet in our Solar System?","A. Uranus","B. Neptune","C. Mars","D. Venus","A","Space", this,this);
+        EasyGamePage ques1 = new  EasyGamePage("What is the coldest planet in our Solar System?","A. Uranus","B. Neptune","C. Mars","D. Venus","A","Space", this,this,"This planet is one of the further planets!");
         ques1.setVisible(true);
-        this.setVisible(false);
-        questionsDone = questionsDone + 1;
+        //this.setVisible(false);
+        jButton2.setEnabled(false);
      
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         //Points point2 = new Points(300);
-        EasyGamePage ques1 = new  EasyGamePage("Which moon of Jupiter's is volcanically active?","A. Titan","B. Enceladus"," C. Ganymede","D. IO","D","Space", this,  this);
+        EasyGamePage ques1 = new  EasyGamePage("Which moon of Jupiter's is volcanically active?","A. Titan","B. Enceladus"," C. Ganymede","D. IO","D","Space", this,  this, "The answer is not Ganymede!");
         ques1.setVisible(true);
         this.setVisible(false);
       
@@ -689,7 +677,7 @@ public class GamePage extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         //Points point7 = new Points(500);
-        QuestionPage ques2 = new  QuestionPage("What color is Mars' Sunset?", "blue", "Space", this,this);
+        QuestionPage ques2 = new  QuestionPage("What color is Mars' Sunset?", "blue", "Space", this,this,"It is orange's opposite color!");
         ques2.setVisible(true);
         dispose();
         
@@ -704,11 +692,8 @@ public class GamePage extends javax.swing.JFrame {
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
         // TODO add your handling code here:
@@ -768,11 +753,7 @@ public class GamePage extends javax.swing.JFrame {
     public javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     public javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     public javax.swing.JButton jButton3;
@@ -785,12 +766,6 @@ public class GamePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
@@ -804,25 +779,32 @@ public class GamePage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     public javax.swing.JPanel mainPage;
     // End of variables declaration//GEN-END:variables
 
-public void showMessage(String text){
+public void showMessage(){
+    
     questionsDone++;
-     if (questionsDone != 4){
+    for (int i = 0; i < (questionsDone); i++){
+     total += points[i];
+     System.out.println(total);
+    }
+     if (questionsDone != 12){
         PointPage.setVisible(true);
-        jLabel8.setText(text);
+        jLabel8.setText("You have "+ total + "points");
      }
      else{
         endPage.setVisible(true);
-         jLabel11.setText(text);
+         jLabel11.setText("You have "+ total + "points");
      }
     }
 
- 
+ public void modifyPoints(int num){
+     
+     points[questionsDone] = num ;
+     
+     }
+
 }
 
     
